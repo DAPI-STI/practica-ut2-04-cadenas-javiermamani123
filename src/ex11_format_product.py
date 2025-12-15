@@ -16,3 +16,8 @@ def format_product(name: str, price: float, units: int) -> str:
     """Devuelve una descripción de producto formateada con anchuras fijas."""
     # TODO: usa f-strings y formatos tipo {price:9.2f}, {units:03d}, {total:11.2f}
     raise NotImplementedError("Implementa format_product(name, price, units)")
+
+def format_product(name: str, price: float, units: int) -> str:
+    total = price * units
+    return f"{name}\n{price:8.2f}\n{units:03d}\n{total:10.2f}"
+

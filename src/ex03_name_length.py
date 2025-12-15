@@ -9,3 +9,10 @@ def name_upper_and_length(name: str) -> tuple[str, int]:
     """Devuelve (NAME_EN_MAYUSCULAS, numero_de_letras_sin_espacios)."""
     # TODO: pasa el nombre a mayúsculas y cuenta las letras sin espacios
     raise NotImplementedError("Implementa name_upper_and_length(name)")
+
+def name_upper_and_length(name: str) -> tuple[str, int]:
+    """Devuelve (NAME_EN_MAYUSCULAS, numero_de_letras_sin_espacios)."""
+    name_upper = name.upper()
+    letters_count = len(name.replace(" ", ""))
+    return name_upper, letters_count
+

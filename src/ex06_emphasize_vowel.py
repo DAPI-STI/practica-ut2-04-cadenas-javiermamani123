@@ -19,3 +19,21 @@ def emphasize_vowel(phrase: str, vowel: str) -> str:
     """
     # TODO: validar y transformar
     raise NotImplementedError("Implementa emphasize_vowel(phrase, vowel)")
+
+def emphasize_vowel(phrase: str, vowel: str) -> str:
+    """
+    Convierte a mayúscula todas las apariciones de vowel en la frase.
+    """
+    if len(vowel) != 1 or vowel.lower() not in "aeiou":
+        raise ValueError("La vocal debe ser un solo carácter y estar en 'aeiou'")
+
+    vowel_lower = vowel.lower()
+    result = ""
+
+    for char in phrase:
+        if char.lower() == vowel_lower:
+            result += char.upper()
+        else:
+            result += char
+
+    return result
